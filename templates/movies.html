@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все Фильмы
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Все фильмы</h1>
+
+    {% for elements in movies %}
+    <div class="alert alert-info">
+        <h2> {{ elements.name }}</h2>
+        <p> {{ elements.info }}</p>
+        <p><b>Дата: {{elements.date.date() }}</b></p>
+        <a href="/movies/{{ elements.pk }}" class="btn btn-warning">Детальнее</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

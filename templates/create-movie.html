@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Main
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление фильма</h1>
+    <form method="post">
+        <input type="text" name="name" pk="name" class="form-control" placeholder="Введите название"><br>
+        <textarea name="info" pk="info" class="form-control" placeholder="Введите информацию"></textarea><br>
+<!--        <textarea name="text" id="title" class="form-control" placeholder="Введите название"></textarea><br>-->
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}
